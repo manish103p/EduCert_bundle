@@ -1,0 +1,86 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+
+/CHANGELOG.md                      
+/chaincode
+/CODEOWNERS                        
+/ci
+/CODE_OF_CONDUCT.md                
+/commercial-paper
+/CONTRIBUTING.md                   
+/config
+/LICENSE                           
+/MAINTAINERS.md                    
+/high-throughput
+/README.md                         
+/interest_rate_swaps
+/SECURITY.md                       
+/off_chain_data
+/asset-transfer-abac               
+/scripts
+/asset-transfer-basic              
+/test-application
+/asset-transfer-events             
+/test-network
+/asset-transfer-ledger-queries     
+/test-network-k8s
+/asset-transfer-private-data       
+/test-network-nano-bash
+/asset-transfer-sbe                
+/token-erc-1155
+/asset-transfer-secured-agreement  
+/token-erc-20
+/auction-dutch                     
+/token-erc-721
+/auction-simple                    
+/token-utxo
+/bin
+
+# Emacs backup files
+*~
+*#
+.#*
+# Vim file artifacts
+.*.sw*
+# installed platform-specific binaries
+
+.DS_Store
+.project
+# omit Go vendor directories
+
+.vscode
+.gradle
+.idea
+# Dependency directories
+
+# Ignore Gradle build output directory
+
+package-lock.json
+
+
+# Eclipse
+.classpath
+.settings
