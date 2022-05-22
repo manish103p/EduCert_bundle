@@ -52,7 +52,7 @@ const applicantChaincode = "applicant-asset-transfer";
 const documentChaincode = "document-asset-transfer";
 const channelName = "mychannel"
 
-const mongodbPort = "3001";
+const mongodbPort = "3002";
 var cors = require('cors');
 const { response, request } = require("express");
 const e = require("express");
@@ -73,6 +73,7 @@ app.listen(4001, () => {
 
 
 app.post("/registerAdmin", async (req, res) => {
+console.log("231231");
     try {
         let organization = req.body.organization;
         let user = new User({
