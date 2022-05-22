@@ -43,7 +43,7 @@ exports.buildCCPOrg2 = () => {
 
 exports.buildCCPOrg3 = () => {
 	// load the common connection configuration file
-	const ccpPath = path.resolve(__dirname,  'connection-profile/connection-org3.json');
+	const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'org3.example.com','connection-org3.json');
 	const fileExists = fs.existsSync(ccpPath);
 	if (!fileExists) {
 		throw new Error(`no such file or directory: ${ccpPath}`);
