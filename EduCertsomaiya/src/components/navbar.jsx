@@ -49,8 +49,8 @@ const navigate = useNavigate();
       </nav>*/
 
       <header>
-        <h1><img src="https://www.formationsco.com/wp-content/uploads/2017/12/certificate_icon.png" className="logoImg" /> DocdInBlocks</h1>
-        <h3>Org 1</h3>
+        <h1><img src="https://www.formationsco.com/wp-content/uploads/2017/12/certificate_icon.png" className="logoImg" /> DocsInBlocks</h1>
+        <h6>Org 1</h6>
         <div className="nav-div">
           <NavLink to="/"> <button className="navBtn ">Home</button></NavLink>
           
@@ -84,19 +84,19 @@ const navigate = useNavigate();
             <>
               <NavLink to="/organization/dashboard"><button className="navBtn">Dashboard</button></NavLink>
               <NavLink to="/organization/viewApplicants"><button className="navBtn">View Applicants</button></NavLink>
-              <NavLink to="/organization/registerApplicant"><button className="navBtn">Register Applicant</button></NavLink>
+              {/* <NavLink to="/organization/registerApplicant"><button className="navBtn">Register Applicant</button></NavLink> */}
               <NavLink to="/organization/createDocument"><button className="navBtn">Create Document</button></NavLink>
             </>
           }
 
-          { user && user.role === 'applicant' && 
+          {/* { user && user.role === 'applicant' && 
             <>
               <NavLink to="/applicant/dashboard"><button className="navBtn">Dashboard</button></NavLink>
               <NavLink to="/applicant/profile"><button className="navBtn">Profile</button></NavLink>
               <NavLink to="/applicant/createDocument"><button className="navBtn">Create Document</button></NavLink>
               <NavLink to="/applicant/viewOrganizations"><button className="navBtn">View Organizations</button></NavLink>
             </>
-          }
+          } */}
 
 
           { !user &&

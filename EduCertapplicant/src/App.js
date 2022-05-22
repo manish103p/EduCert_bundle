@@ -71,8 +71,8 @@ class App extends Component{
                 </Route>
                 <Route element={<ViceAdminProtectedRoutes />}>
                   <Route exact path="organization/dashboard" element={<OrganizationDashboard />}/>
-                  <Route exact path="organization/createDocument" element={<CreateVerifiedDocument />} />
-                  <Route exact path="organization/verify" element={<VerifyDocument />} />
+                  {/* <Route exact path="organization/createDocument" element={<CreateVerifiedDocument />} />
+                  <Route exact path="organization/verify" element={<VerifyDocument />} /> */}
                   <Route exact path="organization/viewApplicants" element={<ViewApplicants />} />
                   <Route exact path="organization/viewApplicantDocuments" element={<ViewApplicantDocuments />} />
                   <Route exact path="organization/registerApplicant" element={<RegisterApplicant />} />

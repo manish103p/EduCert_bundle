@@ -1,13 +1,3 @@
-/**
- * @author Varsha Kamath
- * @email varsha.kamath@stud.fra-uas.de
- * @create date 2021-01-23 21:50:38
- * @modify date 2021-01-30 19:52:41
- * @desc [Primary Smartcontract to initiate ledger with document details]
- */
-/*
- * SPDX-License-Identifier: Apache-2.0
- */
 'use strict';
 
 const { Contract } = require('fabric-contract-api');
@@ -17,11 +7,11 @@ let initDocuments = require('./initLedger.json');
 class DocumentContract extends Contract {
 
     async initLedger(ctx) {
-        console.info('============= START : Initialize Ledger ===========');
-        for (let i = 0; i < initDocuments.length; i++) {
-            await ctx.stub.putState(initDocuments[i].documentId, Buffer.from(JSON.stringify(initDocuments[i])));
-            console.info('Added <--> ', initDocuments[i]);
-        }
+        // console.info('============= START : Initialize Ledger ===========');
+        // for (let i = 0; i < initDocuments.length; i++) {
+        //     await ctx.stub.putState(initDocuments[i].documentId, Buffer.from(JSON.stringify(initDocuments[i])));
+        //     console.info('Added <--> ', initDocuments[i]);
+        // }
         console.info('============= END : Initialize Ledger ===========');
     }
 

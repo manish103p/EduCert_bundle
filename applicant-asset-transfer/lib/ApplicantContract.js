@@ -7,11 +7,11 @@ let initApplicants = require('./initLedger.json');
 class ApplicantContract extends Contract {
 
     async initLedger(ctx) {
-        console.info('============= START : Initialize Ledger ===========');
+        /*console.info('============= START : Initialize Ledger ===========');
         for (let i = 0; i < initApplicants.length; i++) {
             await ctx.stub.putState(initApplicants[i].applicantId, Buffer.from(JSON.stringify(initApplicants[i])));
             console.info('Added <--> ', initApplicants[i]);
-        }
+        }*/
         console.info('============= END : Initialize Ledger ===========');
     }
 
