@@ -215,8 +215,8 @@ exports.getDocumentsByApplicantId = async (request) => {
 
 const getDocumentUrls = async (applicantId, documentId) => {
     let blobServiceClient = BlobServiceClient.fromConnectionString(
-        "DefaultEndpointsProtocol=https;AccountName=blockchainimagestore;AccountKey=qA3cp9TRxlCYqz7sTQPN0c/cKaDukEGepGRbjNOEPBWZHtVSalBaOpYIgaNQlrAMUrG8jRJwJYIDshYCN7GZGA==;EndpointSuffix=core.windows.net"
-    );
+            "DefaultEndpointsProtocol=https;AccountName=docsinblocks;AccountKey=4Mn2dj9aJ7YNlIUyNZLCYxf4jYzPpLk+ZJs8YV0hhdKWF1okclfJasJjSbybs5H39lLMJxEDGCDPwHlay8zAhw==;EndpointSuffix=core.windows.net"
+        );
     // console.log(blobServiceClient.generateAccountSasUrl());
     // const account = "blockchainimagestore";
     // const sas = blobServiceClient.generateAccountSasUrl();
