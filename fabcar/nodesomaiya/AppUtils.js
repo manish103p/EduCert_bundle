@@ -41,7 +41,7 @@ exports.buildCCPOrg2 = () => {
 	return ccp;
 };
 
-/*exports.buildCCPOrg3 = () => {
+exports.buildCCPOrg3 = () => {
 	// load the common connection configuration file
 	const ccpPath = path.resolve(__dirname,  'connection-profile/connection-org3.json');
 	const fileExists = fs.existsSync(ccpPath);
@@ -56,7 +56,7 @@ exports.buildCCPOrg2 = () => {
 	console.log(`Loaded the network configuration located at ${ccpPath}`);
 	return ccp;
 };
-*/
+
 
 exports.buildWallet = async (Wallets, walletPath) => {
 	// Create a new  wallet : Note that wallet is for managing identities.

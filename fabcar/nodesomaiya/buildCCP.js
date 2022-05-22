@@ -9,9 +9,9 @@ exports.getCCP = (org) => {
         case 2:
             ccp = buildCCPOrg2();
             break;
-       /* case 3:
+        case 3:
             ccp = buildCCPOrg3();
-            break;*/
+            break;
     }
     return ccp;
 }

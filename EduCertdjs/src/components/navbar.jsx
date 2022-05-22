@@ -50,6 +50,7 @@ const navigate = useNavigate();
 
       <header>
         <h1><img src="https://www.formationsco.com/wp-content/uploads/2017/12/certificate_icon.png" className="logoImg" /> DocdInBlocks</h1>
+        <h3>Org 2</h3>
         <div className="nav-div">
           <NavLink to="/"> <button className="navBtn ">Home</button></NavLink>
           

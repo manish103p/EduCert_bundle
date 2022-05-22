@@ -6,12 +6,19 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - /root/node-api-contract/mongo/database:/data/db
+      - /root/mongo/database:/data/db
 
   mongodbdjs:
     image: mongo
     ports:
       - 27018:27017
     volumes:
-      - /root/node-api-contract/mongo/databasedjs:/data/db
+      - /root/mongo/databasedjs:/data/db
+      
+  mongodbapp:
+    image: mongo
+    ports:
+      - 27019:27017
+    volumes:
+      - /root/mongo/databaseapp:/data/db
 
