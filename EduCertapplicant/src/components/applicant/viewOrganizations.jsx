@@ -10,11 +10,31 @@ class ViewOrganizations extends Component {
         sorting : { property : "organizationId", order : "asc" },
         searchText  : "",
         organizationId:'',
-        error:''
+        error:'',
+        currentOrganization:'',
     };
 
     async componentDidMount(){
         await this.setPermissions();
+        fetch(url+"/getMyDetails", {
+            method: "POST",
+            // body:JSON.stringify({"data":{"applicantId":this.state.applicantId}}),
+            headers: { "Content-Type": "application/json", "x-auth-token": localStorage.getItem("eduCertJwtToken") }
+        })
+        .then(response => {
+            if(response.ok)
+                return response.json();
+            else{
+                return response.text().then(text => { throw new Error(text) })
+            }
+        })
+        .then((data) =>{
+            this.setState({currentOrganization: data.currentOrganization})
+        })
+        .catch(err => {
+            this.setState({error:"Fetch Error: "+err.message});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
     }
 
     grantPermission = organization =>{
@@ -105,12 +125,6 @@ class ViewOrganizations extends Component {
 
     }
 
-    hasRevokePermission = organizationId => {
-        if(organizationId == 'org1')
-            return true;
-        return false;
-    }
-
     sort(property){
         if(this.state.sorting.property === property){
             const order = (this.state.sorting.order === "asc") ? "desc" : "asc";
@@ -168,9 +182,9 @@ class ViewOrganizations extends Component {
                                     { organization.hasPermission && 
                                     <button  type="button" class="btn btn-success" disabled>Grant</button>}
                                 </td>
-                                <td>{ organization.hasPermission && this.hasRevokePermission(organization.organizationId) &&
+                                <td>{ organization.hasPermission && this.state.currentOrganization !== organization.organizationId &&
                                     <button type="button" onClick={()=>this.revokePermission(organization.organizationId)} class="btn btn-danger">Revoke</button>}
-                                    { !organization.hasPermission && 
+                                    { !organization.hasPermission && this.state.currentOrganization === organization.organizationId &&
                                     <button type="button" class="btn btn-danger" disabled>Revoke</button>}
                                     
                                 </td>
