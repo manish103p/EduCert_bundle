@@ -176,7 +176,7 @@ class ViewOrganizations extends Component {
                         <tbody>    
                         { sortedOrganizations.map((organization) => 
                             <tr key={organization.organizationId}>
-                                <td> {organization.organizationId} {organization.hasPermission}</td>
+                                <td> {organization.organizationId}</td>
                                 <td>{ !organization.hasPermission && 
                                     <button  type="button" onClick={()=>this.grantPermission(organization.organizationId)} class="btn btn-success">Grant</button>}
                                     { organization.hasPermission && 
@@ -184,7 +184,7 @@ class ViewOrganizations extends Component {
                                 </td>
                                 <td>{ organization.hasPermission && this.state.currentOrganization !== organization.organizationId &&
                                     <button type="button" onClick={()=>this.revokePermission(organization.organizationId)} class="btn btn-danger">Revoke</button>}
-                                    { !organization.hasPermission && this.state.currentOrganization === organization.organizationId &&
+                                    { (!organization.hasPermission ||  this.state.currentOrganization === organization.organizationId) &&
                                     <button type="button" class="btn btn-danger" disabled>Revoke</button>}
                                     
                                 </td>
